@@ -1,0 +1,271 @@
+{
+  "data": [
+    {
+      "id": "obs-9f3a2c4d-e8b1-4d56-9c33-a1f5e7d8b201",
+      "traceId": "trace-1b8a4f5e-c9d2-4b3a-8e6f-2d4c8a9b7e15",
+      "parentObservationId": null,
+      "type": "GENERATION",
+      "name": "litellm-completion",
+      "startTime": "2026-01-15T09:14:22.341Z",
+      "completionStartTime": "2026-01-15T09:14:22.749Z",
+      "endTime": "2026-01-15T09:14:24.108Z",
+      "level": "DEFAULT",
+      "statusMessage": "",
+      "environment": "production",
+      "version": "1.42.0",
+      "bookmarked": false,
+      "public": false,
+      "createdAt": "2026-01-15T09:14:22.341Z",
+      "updatedAt": "2026-01-15T09:14:24.108Z",
+      "traceName": "advisorchat-turn",
+      "traceMetadata": {
+        "team": "AdvisorChat",
+        "product": "chat",
+        "env": "prod",
+        "data_class": "pii_sensitive"
+      },
+      "traceTags": ["streaming", "rag"],
+      "input": "[{\"role\":\"system\",\"content\":\"You are a financial assistant. Use the provided context to answer questions about ETFs, savings plans, and account features. Do not give individualised investment advice.\"},{\"role\":\"user\",\"content\":\"What is the difference between an accumulating and a distributing ETF?\"}]",
+      "output": "{\"role\":\"assistant\",\"content\":\"An accumulating ETF reinvests its dividends and interest back into the fund automatically, which is reflected in a rising share price over time. A distributing ETF pays dividends out to shareholders on a regular schedule. Accumulating funds tend to be more tax efficient in jurisdictions that defer tax until realisation; distributing funds give you cash flow you can use or reinvest yourself.\"}",
+      "metadata": {
+        "litellm_call_id": "5ad8e6f0-bb14-4b6e-9e4f-2c0a8e3d4a90",
+        "litellm_proxy_key_alias": "key-advisorchat-prod",
+        "request_id": "req-7c0a8e3d-4a90-4b6e-9e4f-bb14"
+      },
+      "providedModelName": "claude-sonnet-4-6",
+      "internalModelId": "eu.anthropic.claude-sonnet-4-6",
+      "modelParameters": {
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "usageDetails": {
+        "input": 612,
+        "output": 248,
+        "total": 860
+      },
+      "inputUsage": 612,
+      "outputUsage": 248,
+      "totalUsage": 860,
+      "costDetails": {
+        "input": 0.001836,
+        "output": 0.003720,
+        "total": 0.005556
+      }
+    },
+    {
+      "id": "obs-7a13be29-4c0f-49d2-8e1a-b3c5d7f9a042",
+      "traceId": "trace-3d72a9c1-58e4-4f6b-9a0c-1e5d8b6f3c20",
+      "parentObservationId": null,
+      "type": "GENERATION",
+      "name": "litellm-completion",
+      "startTime": "2026-01-15T09:18:45.117Z",
+      "completionStartTime": "2026-01-15T09:18:45.402Z",
+      "endTime": "2026-01-15T09:18:46.984Z",
+      "level": "DEFAULT",
+      "statusMessage": "",
+      "environment": "production",
+      "version": "1.42.0",
+      "bookmarked": false,
+      "public": false,
+      "createdAt": "2026-01-15T09:18:45.117Z",
+      "updatedAt": "2026-01-15T09:18:46.984Z",
+      "traceName": "advisorchat-turn",
+      "traceMetadata": {
+        "team": "AdvisorChat",
+        "product": "chat",
+        "env": "prod",
+        "data_class": "pii_sensitive"
+      },
+      "traceTags": ["streaming", "rag", "cached"],
+      "input": "[{\"role\":\"system\",\"content\":\"<large stable system prompt + RAG context omitted for brevity>\"},{\"role\":\"user\",\"content\":\"Are dividends from a distributing ETF taxed differently than capital gains in Germany?\"}]",
+      "output": "{\"role\":\"assistant\",\"content\":\"In Germany, ETF dividends and capital gains are both subject to the flat capital gains tax (Abgeltungsteuer) of roughly 25 percent plus solidarity surcharge. The main differences arise in timing: distributions are taxed when paid out, while accumulating fund gains are taxed at realisation, with a partial annual advance payment (Vorabpauschale). Specific treatment depends on your personal situation, so check with a tax advisor.\"}",
+      "metadata": {
+        "litellm_call_id": "9c4d8e1f-2a3b-4c5d-9e8f-7b6a5c4d3e2f",
+        "litellm_proxy_key_alias": "key-advisorchat-prod",
+        "request_id": "req-2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"
+      },
+      "providedModelName": "claude-sonnet-4-6",
+      "internalModelId": "eu.anthropic.claude-sonnet-4-6",
+      "modelParameters": {
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "usageDetails": {
+        "input": 402,
+        "cache_read_input_tokens": 3812,
+        "output": 284,
+        "total": 4498
+      },
+      "inputUsage": 402,
+      "outputUsage": 284,
+      "totalUsage": 4498,
+      "costDetails": {
+        "input": 0.001206,
+        "cache_read_input_tokens": 0.001144,
+        "output": 0.004260,
+        "total": 0.006610
+      }
+    },
+    {
+      "id": "obs-c8e4f1a2-9b3d-4e7c-a01f-5d6c8e2b4a17",
+      "traceId": "trace-8e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4a5b",
+      "parentObservationId": null,
+      "type": "GENERATION",
+      "name": "litellm-completion",
+      "startTime": "2026-01-15T10:22:11.508Z",
+      "completionStartTime": null,
+      "endTime": "2026-01-15T10:22:11.873Z",
+      "level": "ERROR",
+      "statusMessage": "throttling_exception: Rate exceeded for model anthropic.claude-sonnet-4 in region eu-central-1",
+      "environment": "production",
+      "version": "1.42.0",
+      "bookmarked": false,
+      "public": false,
+      "createdAt": "2026-01-15T10:22:11.508Z",
+      "updatedAt": "2026-01-15T10:22:11.873Z",
+      "traceName": "advisorchat-turn",
+      "traceMetadata": {
+        "team": "AdvisorChat",
+        "product": "chat",
+        "env": "prod",
+        "data_class": "pii_sensitive"
+      },
+      "traceTags": ["streaming", "rag", "error"],
+      "input": "[{\"role\":\"system\",\"content\":\"You are a financial assistant...\"},{\"role\":\"user\",\"content\":\"How do I set up a recurring savings plan?\"}]",
+      "output": null,
+      "metadata": {
+        "litellm_call_id": "1f2e3d4c-5b6a-7d8e-9f0a-1b2c3d4e5f6a",
+        "litellm_proxy_key_alias": "key-advisorchat-prod",
+        "request_id": "req-5b6a7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e",
+        "error": {
+          "type": "ThrottlingException",
+          "provider": "bedrock",
+          "retryable": true
+        }
+      },
+      "providedModelName": "claude-sonnet-4-6",
+      "internalModelId": "eu.anthropic.claude-sonnet-4-6",
+      "modelParameters": {
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "usageDetails": {},
+      "inputUsage": 0,
+      "outputUsage": 0,
+      "totalUsage": 0,
+      "costDetails": {}
+    },
+    {
+      "id": "obs-4f8a2c1e-7b3d-4e9c-a8f1-2d5c8b6e4a93",
+      "traceId": "trace-2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d",
+      "parentObservationId": null,
+      "type": "GENERATION",
+      "name": "litellm-completion",
+      "startTime": "2026-01-15T11:45:33.024Z",
+      "completionStartTime": "2026-01-15T11:45:36.587Z",
+      "endTime": "2026-01-15T11:45:39.142Z",
+      "level": "DEFAULT",
+      "statusMessage": "",
+      "environment": "production",
+      "version": "1.42.0",
+      "bookmarked": false,
+      "public": false,
+      "createdAt": "2026-01-15T11:45:33.024Z",
+      "updatedAt": "2026-01-15T11:45:39.142Z",
+      "traceName": "advisorchat-turn",
+      "traceMetadata": {
+        "team": "AdvisorChat",
+        "product": "chat",
+        "env": "prod",
+        "data_class": "pii_sensitive"
+      },
+      "traceTags": ["streaming", "rag"],
+      "input": "[{\"role\":\"system\",\"content\":\"You are a financial assistant. Use the provided context to answer questions about ETFs, savings plans, and account features. Do not give individualised investment advice.\"},{\"role\":\"user\",\"content\":\"What should I consider when comparing different brokerage account types for long-term investing?\"}]",
+      "output": "{\"role\":\"assistant\",\"content\":\"Several practical factors matter when comparing brokerage accounts for long-term investing: trading and custody fees, the range of available securities, tax treatment in your jurisdiction, the platform's reliability and reporting tools, and any deposit protection coverage. For passive long-term strategies, low fees and broad ETF availability typically dominate the comparison.\"}",
+      "metadata": {
+        "litellm_call_id": "6d7e8f9a-0b1c-2d3e-4f5a-6b7c8d9e0f1a",
+        "litellm_proxy_key_alias": "key-advisorchat-prod",
+        "request_id": "req-0b1c2d3e-4f5a-6b7c-8d9e-0f1a2b3c4d5e"
+      },
+      "providedModelName": "claude-sonnet-4-6",
+      "internalModelId": "eu.anthropic.claude-sonnet-4-6",
+      "modelParameters": {
+        "temperature": 0.2,
+        "max_tokens": 1024,
+        "stream": true
+      },
+      "usageDetails": {
+        "input": 643,
+        "output": 211,
+        "total": 854
+      },
+      "inputUsage": 643,
+      "outputUsage": 211,
+      "totalUsage": 854,
+      "costDetails": {
+        "input": 0.001929,
+        "output": 0.003165,
+        "total": 0.005094
+      }
+    },
+    {
+      "id": "obs-6b1c4d8e-3a5f-4b9c-8e2d-7f1a4c6b9e35",
+      "traceId": "trace-5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e",
+      "parentObservationId": null,
+      "type": "GENERATION",
+      "name": "litellm-completion",
+      "startTime": "2026-01-15T03:00:15.812Z",
+      "completionStartTime": "2026-01-15T03:00:17.024Z",
+      "endTime": "2026-01-15T03:00:18.355Z",
+      "level": "DEFAULT",
+      "statusMessage": "",
+      "environment": "production",
+      "version": "1.42.0",
+      "bookmarked": false,
+      "public": false,
+      "createdAt": "2026-01-15T03:00:15.812Z",
+      "updatedAt": "2026-01-15T03:00:18.355Z",
+      "traceName": "digestbot-summary",
+      "traceMetadata": {
+        "team": "DigestBot",
+        "product": "news_summary",
+        "env": "prod",
+        "data_class": "no_pii"
+      },
+      "traceTags": ["batch", "summarization"],
+      "input": "[{\"role\":\"system\",\"content\":\"Summarise the following article in two sentences for an internal news digest. Focus on facts.\"},{\"role\":\"user\",\"content\":\"<news article body, approximately 8000 tokens, omitted for brevity>\"}]",
+      "output": "{\"role\":\"assistant\",\"content\":\"The European Central Bank kept its main refinancing rate unchanged at the most recent policy meeting, citing persistent core inflation in services and a still-resilient labour market. Markets had broadly expected the decision and bond yields moved little in response.\"}",
+      "metadata": {
+        "litellm_call_id": "8e9f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b",
+        "litellm_proxy_key_alias": "key-digestbot-prod",
+        "request_id": "req-2c3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f"
+      },
+      "providedModelName": "claude-haiku-4-5",
+      "internalModelId": "eu.anthropic.claude-haiku-4-5",
+      "modelParameters": {
+        "temperature": 0.1,
+        "max_tokens": 512,
+        "stream": false
+      },
+      "usageDetails": {
+        "input": 8214,
+        "output": 178,
+        "total": 8392
+      },
+      "inputUsage": 8214,
+      "outputUsage": 178,
+      "totalUsage": 8392,
+      "costDetails": {
+        "input": 0.006571,
+        "output": 0.000712,
+        "total": 0.007283
+      }
+    }
+  ],
+  "meta": {
+    "cursor": null
+  }
+}
