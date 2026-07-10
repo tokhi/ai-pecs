@@ -107,11 +107,15 @@ We eliminate ticketing bottlenecks by defining teams, models, and budgets in a c
   * Recommendation: **Defer self-hosting**. Consume open-weight models via Bedrock's serverless endpoints for low-tier tasks (such as DigestBot) to lower token costs, and evaluate self-hosting only when a single model's continuous utilization justifies dedicated GPU instances.  
 
 ## 8. Implementation Roadmap & Deferred Alternatives
+For a complete visual mapping of how the Gateway, telemetry paths, S3 audit buckets, and the SLI Service interact, please refer to the **[overall Target Architecture Diagram](./architecture.png)**.
+
 ### Six-Month Roadmap:
 **1. Month 1-2 (Phase 1):** Implement GitOps configuration management, strict key-to-team database mapping, and basic budget caps. Integrate the **Option D SLI monitoring service**.
 
 **2. Month 3-4 (Phase 2):** Introduce the MCP Security Proxy with human-in-the-loop validation for destructive calls.
 
 **3. Month 5-6 (Phase 3):** Roll out the local PII masking gateway middleware and migrate low-priority batch tasks to managed open-weight models on Bedrock to optimize costs.
+
+
 ### Rejected Alternatives:
 Direct DB-Writes from Gateway: We rejected writing metric events directly from the AI Gateway's request handler to Datadog. This adds processing overhead and risks leaking raw prompt PII. Instead, we pull traces asynchronously from the Langfuse database using our background SLI service.

@@ -16,6 +16,7 @@ This repository includes a comprehensive system design for the LLM gateway, an a
 
 * **[architecture.png](./architecture.png)**
 
+
 ## Quick Start (Running T2)
 
 To run the SLI service and execute the test suite, please refer to the detailed instructions in the **[SLI Service README](./sli_service/README.md)**.
