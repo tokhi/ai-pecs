@@ -1,4 +1,4 @@
-# AI Platform Engineer - Case Study Submission
+# LLM gateway
 
 This repository includes a comprehensive system design for the LLM gateway, an asynchronous SLI calculation service, and a target architecture blueprint.
 
