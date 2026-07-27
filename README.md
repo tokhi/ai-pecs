@@ -15,6 +15,7 @@ This repository includes a comprehensive system design for the LLM gateway, an a
 ### T3 - Target Architecture Diagram
 
 * **[architecture.png](./architecture.png)**
+ ![Target Architecture Blueprint](./architecture.png)
 
 
 ## Quick Start (Running T2)
